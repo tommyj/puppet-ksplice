@@ -54,14 +54,14 @@
 #
 # Copyright 2014 Your name here, unless otherwise noted.
 #
-class ksplice {
+class ksplice (
   $accesskey       = $ksplice::params::accesskey,
   $autoinstall     = $ksplice::params::autoinstall,
   $config          = $ksplice::params::config,
   $config_template = $ksplice::params::config_template,
   $https_proxy     = $ksplice::params::https_proxy,
   $package_ensure  = $ksplice::params::package_ensure,
-} inherits ksplice::params {
+) inherits ksplice::params {
 
   validate_re($accesskey, ['^[0-9a-f]{64}$', ''])
   validate_bool($autoinstall)
