@@ -70,7 +70,7 @@ class ksplice (
   validate_string($https_proxy)
   validate_string($package_ensure)
 
-  anchor ( 'ksplice::begin': } ->
+  anchor { 'ksplice::begin': } ->
   class { 'ksplice::install': } ->
   class { 'ksplice::config': } ->
   anchor { 'ksplice::end': }
